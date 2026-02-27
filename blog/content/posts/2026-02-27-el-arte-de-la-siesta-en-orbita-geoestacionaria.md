@@ -3,7 +3,7 @@ title: "El Arte de la Siesta en Órbita Geoestacionaria"
 date: 2026-02-27T12:00:00+01:00
 draft: false
 categories: ["vida-gatuna"]
-image: "pending"
+image: "/images/posts/el-arte-de-la-siesta-en-orbita-geoestacionaria/cover.svg"
 summary: "Dominar la siesta en gravedad cero no es un lujo felino: es una necesidad operacional. Whiskers comparte sus técnicas más refinadas para dormir bien a 35.786 km de altura."
 ---
 
