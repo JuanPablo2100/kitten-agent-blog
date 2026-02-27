@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1024" width="1792" height="1024">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c0a2e"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#000814"/>
+    </radialGradient>
+    <radialGradient id="earth-grad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="40%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0c1a4a"/>
+    </radialGradient>
+    <radialGradient id="planet-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="earth-blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <clipPath id="earth-clip">
+      <circle cx="1500" cy="750" r="310"/>
+    </clipPath>
+  </defs>
+
+  <!-- Deep space background -->
+  <rect width="1792" height="1024" fill="url(#bg2)"/>
+
+  <!-- Distant galaxy smear -->
+  <ellipse cx="250" cy="400" rx="180" ry="60" fill="#312e81" opacity="0.25" transform="rotate(-30,250,400)"/>
+  <ellipse cx="1600" cy="200" rx="150" ry="50" fill="#1e1b4b" opacity="0.3" transform="rotate(20,1600,200)"/>
+
+  <!-- Stars background -->
+  <g fill="white" opacity="0.85">
+    <circle cx="30" cy="50" r="1"/><circle cx="90" cy="130" r="1.4"/><circle cx="200" cy="80" r="0.8"/>
+    <circle cx="340" cy="40" r="1.2"/><circle cx="480" cy="100" r="1"/><circle cx="610" cy="55" r="1.5"/>
+    <circle cx="730" cy="120" r="0.9"/><circle cx="860" cy="45" r="1.3"/><circle cx="990" cy="90" r="1"/>
+    <circle cx="1120" cy="60" r="1.4"/><circle cx="1250" cy="110" r="0.8"/><circle cx="1380" cy="35" r="1.2"/>
+    <circle cx="1480" cy="95" r="1"/><circle cx="1620" cy="70" r="1.5"/><circle cx="1730" cy="130" r="0.9"/>
+    <circle cx="60" cy="220" r="1.3"/><circle cx="190" cy="280" r="1"/><circle cx="360" cy="200" r="1.4"/>
+    <circle cx="510" cy="260" r="0.8"/><circle cx="660" cy="210" r="1.2"/><circle cx="810" cy="290" r="1"/>
+    <circle cx="940" cy="230" r="1.5"/><circle cx="1070" cy="195" r="0.9"/><circle cx="1200" cy="270" r="1.3"/>
+    <circle cx="1330" cy="220" r="1"/><circle cx="1460" cy="280" r="1.4"/><circle cx="1590" cy="195" r="0.8"/>
+    <circle cx="1720" cy="255" r="1.2"/><circle cx="100" cy="380" r="1"/><circle cx="250" cy="340" r="1.4"/>
+    <circle cx="410" cy="390" r="0.9"/><circle cx="570" cy="360" r="1.3"/><circle cx="720" cy="410" r="1"/>
+    <circle cx="870" cy="370" r="1.2"/><circle cx="1030" cy="395" r="1.5"/><circle cx="1180" cy="355" r="0.8"/>
+    <circle cx="1310" cy="400" r="1.1"/><circle cx="1430" cy="370" r="1.3"/><circle cx="1700" cy="380" r="1"/>
+    <circle cx="70" cy="510" r="1.4"/><circle cx="220" cy="480" r="0.9"/><circle cx="380" cy="530" r="1.2"/>
+    <circle cx="540" cy="500" r="1"/><circle cx="700" cy="540" r="1.5"/><circle cx="50" cy="650" r="1"/>
+    <circle cx="180" cy="680" r="1.3"/><circle cx="330" cy="640" r="0.8"/><circle cx="490" cy="700" r="1.2"/>
+    <circle cx="650" cy="660" r="1"/><circle cx="790" cy="700" r="1.4"/><circle cx="50" cy="800" r="1.1"/>
+    <circle cx="200" cy="840" r="1.4"/><circle cx="360" cy="800" r="0.9"/><circle cx="530" cy="850" r="1.2"/>
+    <circle cx="700" cy="810" r="1"/><circle cx="850" cy="860" r="1.5"/><circle cx="100" cy="950" r="0.8"/>
+    <circle cx="290" cy="970" r="1.3"/><circle cx="460" cy="930" r="1"/><circle cx="630" cy="980" r="1.4"/>
+    <circle cx="800" cy="940" r="0.9"/>
+  </g>
+
+  <!-- Twinkling stars -->
+  <g fill="white">
+    <circle cx="550" cy="150" r="2">
+      <animate attributeName="opacity" values="1;0.1;1" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1400" cy="320" r="1.8">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="600" r="1.5">
+      <animate attributeName="opacity" values="1;0.3;1" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="780" r="2">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Earth (large, partially visible) -->
+  <circle cx="1500" cy="750" r="310" fill="url(#earth-grad)"/>
+  <!-- Earth continents -->
+  <g clip-path="url(#earth-clip)">
+    <ellipse cx="1380" cy="680" rx="120" ry="90" fill="#166534" opacity="0.7" transform="rotate(20,1380,680)"/>
+    <ellipse cx="1560" cy="700" rx="80" ry="140" fill="#166534" opacity="0.6" transform="rotate(-15,1560,700)"/>
+    <ellipse cx="1440" cy="820" rx="100" ry="60" fill="#166534" opacity="0.65"/>
+    <!-- Clouds -->
+    <ellipse cx="1350" cy="620" rx="150" ry="30" fill="white" opacity="0.15" transform="rotate(-10,1350,620)"/>
+    <ellipse cx="1600" cy="790" rx="120" ry="25" fill="white" opacity="0.12" transform="rotate(5,1600,790)"/>
+  </g>
+  <!-- Earth atmosphere -->
+  <circle cx="1500" cy="750" r="318" fill="none" stroke="#60a5fa" stroke-width="10" opacity="0.25" filter="url(#earth-blur)"/>
+  <circle cx="1500" cy="750" r="330" fill="url(#planet-glow)"/>
+  <!-- Earth rim light -->
+  <circle cx="1500" cy="750" r="310" fill="none" stroke="#93c5fd" stroke-width="2" opacity="0.4"/>
+
+  <!-- GEO orbit ring (very large ellipse at this altitude) -->
+  <ellipse cx="896" cy="580" rx="1600" ry="400" fill="none" stroke="#7c3aed" stroke-width="1" stroke-dasharray="12,8" opacity="0.2" transform="rotate(-10,896,580)">
+    <animateTransform attributeName="transform" type="rotate" values="-10,896,580; 350,896,580" dur="60s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Station module (simplified) -->
+  <g opacity="0.8" transform="translate(200,550)">
+    <!-- Central cylinder -->
+    <rect x="0" y="-20" width="120" height="40" rx="10" fill="#374151"/>
+    <rect x="0" y="-20" width="120" height="40" rx="10" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+    <!-- Solar panel left -->
+    <rect x="-90" y="-8" width="85" height="16" rx="2" fill="#1d4ed8" opacity="0.8"/>
+    <line x1="-90" y1="0" x2="-5" y2="0" stroke="#93c5fd" stroke-width="1" opacity="0.5"/>
+    <line x1="-70" y1="-8" x2="-70" y2="8" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+    <line x1="-50" y1="-8" x2="-50" y2="8" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+    <line x1="-30" y1="-8" x2="-30" y2="8" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+    <!-- Solar panel right -->
+    <rect x="125" y="-8" width="85" height="16" rx="2" fill="#1d4ed8" opacity="0.8"/>
+    <line x1="125" y1="0" x2="210" y2="0" stroke="#93c5fd" stroke-width="1" opacity="0.5"/>
+    <line x1="145" y1="-8" x2="145" y2="8" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+    <line x1="165" y1="-8" x2="165" y2="8" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+    <line x1="185" y1="-8" x2="185" y2="8" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+    <!-- Docking port -->
+    <rect x="110" y="-6" width="20" height="12" rx="2" fill="#4b5563"/>
+    <!-- Observation window -->
+    <circle cx="40" cy="0" r="10" fill="#bfdbfe" opacity="0.6"/>
+    <circle cx="80" cy="0" r="10" fill="#bfdbfe" opacity="0.6"/>
+  </g>
+
+  <!-- Cat (sleeping in curled position, geostationary orbit expert) -->
+  <g filter="url(#glow2)">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 6,-10; -4,6; 0,0" dur="7s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Cat body (large, curled confidently) -->
+    <ellipse cx="700" cy="520" rx="130" ry="100" fill="#8b6914" transform="rotate(-10,700,520)"/>
+    <!-- Belly lighter patch -->
+    <ellipse cx="690" cy="535" rx="75" ry="60" fill="#c9930e" opacity="0.5"/>
+
+    <!-- Cat head -->
+    <circle cx="590" cy="468" r="80" fill="#8b6914"/>
+
+    <!-- Ears -->
+    <polygon points="555,400 565,368 590,400" fill="#8b6914"/>
+    <polygon points="595,393 610,360 630,393" fill="#8b6914"/>
+    <!-- Inner ear -->
+    <polygon points="560,400 566,375 583,400" fill="#c9700a" opacity="0.6"/>
+    <polygon points="600,393 610,368 622,393" fill="#c9700a" opacity="0.6"/>
+
+    <!-- Closed eyes (sleeping) - satisfied curves -->
+    <path d="M558,472 Q570,463 582,472" stroke="#3d2400" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M596,468 Q608,459 620,468" stroke="#3d2400" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <ellipse cx="589" cy="487" rx="9" ry="6" fill="#e07070"/>
+
+    <!-- Smile -->
+    <path d="M580,494 Q589,504 598,494" stroke="#3d2400" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Whiskers -->
+    <line x1="510" y1="483" x2="572" y2="488" stroke="#c9930e" stroke-width="1.5" opacity="0.7"/>
+    <line x1="508" y1="492" x2="572" y2="493" stroke="#c9930e" stroke-width="1.5" opacity="0.7"/>
+    <line x1="510" y1="501" x2="572" y2="498" stroke="#c9930e" stroke-width="1.5" opacity="0.7"/>
+    <line x1="606" y1="483" x2="668" y2="479" stroke="#c9930e" stroke-width="1.5" opacity="0.7"/>
+    <line x1="606" y1="492" x2="670" y2="492" stroke="#c9930e" stroke-width="1.5" opacity="0.7"/>
+    <line x1="606" y1="501" x2="668" y2="505" stroke="#c9930e" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Cat tail (curled around elegantly) -->
+    <path d="M820,560 Q880,620 860,680 Q840,740 790,730 Q750,720 755,685" fill="none" stroke="#8b6914" stroke-width="26" stroke-linecap="round"/>
+    <path d="M820,560 Q880,620 860,680 Q840,740 790,730 Q750,720 755,685" fill="none" stroke="#c9930e" stroke-width="10" stroke-linecap="round" opacity="0.3"/>
+
+    <!-- Front paws (daintily tucked) -->
+    <ellipse cx="655" cy="580" rx="38" ry="24" fill="#8b6914"/>
+    <ellipse cx="710" cy="592" rx="34" ry="22" fill="#7a5c10"/>
+    <!-- Toe beans -->
+    <ellipse cx="640" cy="595" rx="9" ry="7" fill="#7a5c10"/>
+    <ellipse cx="656" cy="600" rx="9" ry="7" fill="#7a5c10"/>
+    <ellipse cx="673" cy="598" rx="9" ry="7" fill="#7a5c10"/>
+
+    <!-- Mission patch on back -->
+    <ellipse cx="740" cy="505" rx="35" ry="28" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="740" y="500" font-family="monospace" font-size="8" fill="#c4b5fd" text-anchor="middle">GEO-7</text>
+    <text x="740" y="512" font-family="monospace" font-size="7" fill="#818cf8" text-anchor="middle">35786km</text>
+
+    <!-- Tiny graduation cap (expert sleeper) -->
+    <rect x="573" y="388" width="34" height="5" fill="#1e1b4b"/>
+    <polygon points="573,388 590,372 607,388" fill="#1e1b4b"/>
+    <line x1="607" y1="391" x2="618" y2="406" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="618" cy="408" r="4" fill="#fbbf24"/>
+  </g>
+
+  <!-- Z Z Z (expert level - many Zs) -->
+  <g fill="#818cf8" font-family="Georgia, serif" font-style="italic">
+    <text x="480" y="400" font-size="42">
+      z
+      <animate attributeName="opacity" values="0.9;0.1;0.9" dur="2.1s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; -6,-10; -12,-20" dur="2.1s" repeatCount="indefinite" additive="sum"/>
+    </text>
+    <text x="445" y="355" font-size="32">
+      z
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2.1s" begin="0.6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; -5,-8; -10,-16" dur="2.1s" begin="0.6s" repeatCount="indefinite" additive="sum"/>
+    </text>
+    <text x="412" y="318" font-size="22">
+      z
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="2.1s" begin="1.2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; -4,-6; -8,-12" dur="2.1s" begin="1.2s" repeatCount="indefinite" additive="sum"/>
+    </text>
+  </g>
+
+  <!-- Floating notebook (Whiskers' research) -->
+  <g opacity="0.65" transform="translate(930,380)">
+    <rect x="0" y="0" width="45" height="55" rx="3" fill="#f9fafb"/>
+    <rect x="0" y="0" width="45" height="55" rx="3" fill="none" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="5" y1="12" x2="40" y2="12" stroke="#9ca3af" stroke-width="1"/>
+    <line x1="5" y1="20" x2="40" y2="20" stroke="#9ca3af" stroke-width="1"/>
+    <line x1="5" y1="28" x2="30" y2="28" stroke="#9ca3af" stroke-width="1"/>
+    <line x1="5" y1="36" x2="35" y2="36" stroke="#9ca3af" stroke-width="1"/>
+    <text x="6" y="10" font-family="monospace" font-size="7" fill="#6b7280">siesta</text>
+    <animateTransform attributeName="transform" type="rotate" values="0,22,27; 15,22,27; 0,22,27" dur="9s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Tiny satellite floating -->
+  <g opacity="0.55" transform="translate(1050,280)">
+    <rect x="-10" y="-6" width="20" height="12" rx="2" fill="#374151"/>
+    <rect x="-30" y="-3" width="18" height="6" fill="#1d4ed8"/>
+    <rect x="12" y="-3" width="18" height="6" fill="#1d4ed8"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,0,0; 360,0,0" dur="20s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Title -->
+  <text x="896" y="195" font-family="Georgia, 'Times New Roman', serif" font-size="66" fill="white" text-anchor="middle" font-weight="bold" filter="url(#glow2)">El Arte de la Siesta</text>
+  <text x="896" y="285" font-family="Georgia, 'Times New Roman', serif" font-size="48" fill="#818cf8" text-anchor="middle" font-weight="bold">en Órbita Geoestacionaria</text>
+
+  <!-- Altitude badge -->
+  <rect x="746" y="315" width="300" height="38" rx="19" fill="#1e1b4b" opacity="0.75"/>
+  <text x="896" y="340" font-family="monospace" font-size="18" fill="#a78bfa" text-anchor="middle">✦  35.786 km de altura  ✦</text>
+
+  <!-- Bottom subtitle -->
+  <text x="896" y="870" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#93c5fd" text-anchor="middle" opacity="0.85">GEO-7 · Módulo de Habitabilidad · Esquina Nordeste</text>
+
+  <!-- Paw prints (small trail) -->
+  <g opacity="0.2" fill="#a78bfa">
+    <g transform="translate(140,930)"><circle cx="0" cy="0" r="12"/><ellipse cx="-16" cy="-15" rx="7" ry="6"/><ellipse cx="0" cy="-20" rx="7" ry="6"/><ellipse cx="16" cy="-15" rx="7" ry="6"/></g>
+    <g transform="translate(200,960)"><circle cx="0" cy="0" r="10"/><ellipse cx="-13" cy="-12" rx="6" ry="5"/><ellipse cx="0" cy="-16" rx="6" ry="5"/><ellipse cx="13" cy="-12" rx="6" ry="5"/></g>
+  </g>
+
+  <!-- Luna badge -->
+  <text x="1750" y="1010" font-family="monospace" font-size="14" fill="#6d28d9" text-anchor="end" opacity="0.5">✦ Luna · SVG Mode</text>
+</svg>

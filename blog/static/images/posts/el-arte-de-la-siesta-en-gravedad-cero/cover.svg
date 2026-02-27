@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1024" width="1792" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0a2e"/>
+      <stop offset="60%" stop-color="#0d1b4b"/>
+      <stop offset="100%" stop-color="#000010"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep space background -->
+  <rect width="1792" height="1024" fill="url(#bg)"/>
+
+  <!-- Nebula glow -->
+  <ellipse cx="896" cy="512" rx="700" ry="400" fill="url(#glow)"/>
+  <ellipse cx="300" cy="200" rx="250" ry="150" fill="#1e1b4b" opacity="0.4"/>
+  <ellipse cx="1500" cy="800" rx="300" ry="180" fill="#1e3a5f" opacity="0.3"/>
+
+  <!-- Stars (static small) -->
+  <g fill="white" opacity="0.8">
+    <circle cx="50" cy="80" r="1.2"/><circle cx="180" cy="30" r="0.8"/><circle cx="320" cy="110" r="1.5"/>
+    <circle cx="450" cy="60" r="1"/><circle cx="600" cy="90" r="1.2"/><circle cx="750" cy="20" r="0.8"/>
+    <circle cx="900" cy="70" r="1.4"/><circle cx="1050" cy="40" r="1"/><circle cx="1200" cy="100" r="1.3"/>
+    <circle cx="1350" cy="25" r="0.9"/><circle cx="1500" cy="85" r="1.5"/><circle cx="1650" cy="50" r="1"/>
+    <circle cx="1750" cy="120" r="0.8"/><circle cx="80" cy="200" r="1.3"/><circle cx="200" cy="300" r="0.9"/>
+    <circle cx="400" cy="250" r="1.1"/><circle cx="560" cy="180" r="1.4"/><circle cx="700" cy="280" r="0.7"/>
+    <circle cx="850" cy="160" r="1.2"/><circle cx="1000" cy="220" r="1"/><circle cx="1150" cy="190" r="1.5"/>
+    <circle cx="1300" cy="270" r="0.8"/><circle cx="1450" cy="150" r="1.3"/><circle cx="1600" cy="240" r="1"/>
+    <circle cx="1720" cy="300" r="1.1"/><circle cx="120" cy="400" r="0.9"/><circle cx="280" cy="450" r="1.4"/>
+    <circle cx="500" cy="380" r="1"/><circle cx="680" cy="420" r="1.3"/><circle cx="820" cy="350" r="0.8"/>
+    <circle cx="1100" cy="400" r="1.2"/><circle cx="1280" cy="380" r="1"/><circle cx="1420" cy="430" r="1.4"/>
+    <circle cx="1580" cy="390" r="0.9"/><circle cx="1740" cy="440" r="1.1"/><circle cx="60" cy="550" r="1.3"/>
+    <circle cx="230" cy="580" r="0.8"/><circle cx="380" cy="540" r="1.5"/><circle cx="530" cy="600" r="1"/>
+    <circle cx="700" cy="560" r="1.2"/><circle cx="1080" cy="570" r="0.9"/><circle cx="1240" cy="540" r="1.4"/>
+    <circle cx="1400" cy="590" r="1"/><circle cx="1560" cy="550" r="1.3"/><circle cx="1700" cy="580" r="0.8"/>
+    <circle cx="100" cy="700" r="1.1"/><circle cx="260" cy="720" r="1.4"/><circle cx="430" cy="680" r="0.9"/>
+    <circle cx="590" cy="740" r="1.2"/><circle cx="750" cy="700" r="1"/><circle cx="1140" cy="690" r="1.3"/>
+    <circle cx="1310" cy="730" r="0.8"/><circle cx="1470" cy="700" r="1.5"/><circle cx="1630" cy="720" r="1"/>
+    <circle cx="1760" cy="680" r="1.2"/><circle cx="140" cy="850" r="0.9"/><circle cx="310" cy="870" r="1.3"/>
+    <circle cx="480" cy="830" r="1"/><circle cx="640" cy="880" r="1.4"/><circle cx="800" cy="840" r="0.8"/>
+    <circle cx="1170" cy="860" r="1.1"/><circle cx="1340" cy="880" r="1.4"/><circle cx="1500" cy="840" r="0.9"/>
+    <circle cx="1660" cy="870" r="1.2"/><circle cx="1780" cy="830" r="1"/>
+    <circle cx="960" cy="950" r="0.8"/><circle cx="1020" cy="980" r="1.3"/>
+  </g>
+
+  <!-- Twinkling stars -->
+  <g fill="white">
+    <circle cx="160" cy="140" r="1.5">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="310" r="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1350" cy="480" r="1.8">
+      <animate attributeName="opacity" values="1;0.1;1" dur="3.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1650" cy="180" r="1.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="430" cy="770" r="1.8">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1200" cy="900" r="1.5">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Earth below (partial) -->
+  <ellipse cx="896" cy="1120" rx="900" ry="320" fill="#1a4875" opacity="0.7"/>
+  <ellipse cx="896" cy="1120" rx="900" ry="320" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+  <!-- Earth surface detail -->
+  <ellipse cx="600" cy="1060" rx="180" ry="60" fill="#2d6a4f" opacity="0.6"/>
+  <ellipse cx="1100" cy="1080" rx="140" ry="50" fill="#2d6a4f" opacity="0.5"/>
+  <!-- Atmosphere glow -->
+  <ellipse cx="896" cy="1120" rx="910" ry="330" fill="none" stroke="#60a5fa" stroke-width="8" opacity="0.2" filter="url(#blur-soft)"/>
+
+  <!-- Floating cat (sleeping, zero-g) -->
+  <g filter="url(#glow-filter)">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 8,-12; -5,8; 0,0" dur="6s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Cat body (curled in space) -->
+    <ellipse cx="896" cy="480" rx="120" ry="90" fill="#c9a96e" transform="rotate(-15,896,480)"/>
+
+    <!-- Cat head -->
+    <circle cx="980" cy="430" r="75" fill="#c9a96e"/>
+
+    <!-- Cat ears -->
+    <polygon points="945,368 958,340 975,368" fill="#c9a96e"/>
+    <polygon points="999,358 1014,330 1028,358" fill="#c9a96e"/>
+    <!-- Inner ear -->
+    <polygon points="949,368 958,348 969,368" fill="#e8b4a0" opacity="0.7"/>
+    <polygon points="1003,360 1012,340 1022,360" fill="#e8b4a0" opacity="0.7"/>
+
+    <!-- Sleeping face - closed eyes (curved lines) -->
+    <path d="M958,432 Q968,425 978,432" stroke="#4a3728" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M990,428 Q1000,421 1010,428" stroke="#4a3728" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Small nose -->
+    <ellipse cx="984" cy="446" rx="8" ry="5" fill="#e8a0a0"/>
+
+    <!-- Mouth smile -->
+    <path d="M976,452 Q984,460 992,452" stroke="#4a3728" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Whiskers left -->
+    <line x1="910" y1="444" x2="958" y2="448" stroke="#a08060" stroke-width="1.5" opacity="0.8"/>
+    <line x1="910" y1="452" x2="958" y2="452" stroke="#a08060" stroke-width="1.5" opacity="0.8"/>
+    <line x1="910" y1="460" x2="958" y2="456" stroke="#a08060" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Whiskers right -->
+    <line x1="1010" y1="444" x2="1058" y2="440" stroke="#a08060" stroke-width="1.5" opacity="0.8"/>
+    <line x1="1010" y1="452" x2="1060" y2="452" stroke="#a08060" stroke-width="1.5" opacity="0.8"/>
+    <line x1="1010" y1="460" x2="1058" y2="464" stroke="#a08060" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Cat tail (curled) -->
+    <path d="M780,510 Q730,560 760,610 Q790,660 840,640 Q870,625 860,590" fill="none" stroke="#c9a96e" stroke-width="22" stroke-linecap="round"/>
+    <path d="M780,510 Q730,560 760,610 Q790,660 840,640 Q870,625 860,590" fill="none" stroke="#b8894e" stroke-width="8" stroke-linecap="round" opacity="0.3"/>
+
+    <!-- Front paws (tucked, floating) -->
+    <ellipse cx="870" cy="530" rx="35" ry="22" fill="#c9a96e"/>
+    <ellipse cx="920" cy="540" rx="32" ry="20" fill="#b8894e"/>
+    <!-- Paw toes -->
+    <ellipse cx="855" cy="544" rx="8" ry="6" fill="#b8894e"/>
+    <ellipse cx="870" cy="548" rx="8" ry="6" fill="#b8894e"/>
+    <ellipse cx="886" cy="546" rx="8" ry="6" fill="#b8894e"/>
+
+    <!-- Space suit collar/ring -->
+    <ellipse cx="970" cy="505" rx="90" ry="25" fill="none" stroke="#a78bfa" stroke-width="3" opacity="0.7"/>
+    <ellipse cx="970" cy="505" rx="90" ry="25" fill="#6d28d9" opacity="0.15"/>
+
+    <!-- Velcro patch on body -->
+    <rect x="840" y="480" width="40" height="25" rx="4" fill="#6d28d9" opacity="0.6"/>
+    <text x="860" y="497" font-family="monospace" font-size="9" fill="#c4b5fd" text-anchor="middle">MIAU-1</text>
+  </g>
+
+  <!-- Z Z Z floating (sleeping indicators) -->
+  <g fill="#a78bfa" font-family="Georgia, serif" font-style="italic" opacity="0.9">
+    <text x="1060" y="380" font-size="36" opacity="0.9">
+      z
+      <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 5,-8; 10,-16" dur="2s" repeatCount="indefinite" additive="sum"/>
+    </text>
+    <text x="1100" y="340" font-size="28" opacity="0.7">
+      z
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 4,-7; 8,-14" dur="2s" begin="0.5s" repeatCount="indefinite" additive="sum"/>
+    </text>
+    <text x="1132" y="305" font-size="20" opacity="0.5">
+      z
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 3,-6; 6,-12" dur="2s" begin="1s" repeatCount="indefinite" additive="sum"/>
+    </text>
+  </g>
+
+  <!-- Floating small objects (zero-g debris) -->
+  <g opacity="0.6">
+    <!-- Small food packet -->
+    <rect x="760" y="360" width="28" height="18" rx="3" fill="#4ade80" transform="rotate(25,774,369)">
+      <animateTransform attributeName="transform" type="rotate" values="25,774,369; 45,774,369; 25,774,369" dur="8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Pencil -->
+    <rect x="1120" y="550" width="50" height="6" rx="2" fill="#fbbf24" transform="rotate(-30,1145,553)">
+      <animateTransform attributeName="transform" type="rotate" values="-30,1145,553; -60,1145,553; -30,1145,553" dur="10s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Small star -->
+    <polygon points="800,640 806,655 822,655 810,665 815,680 800,670 785,680 790,665 778,655 794,655" fill="#fde68a" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="0,800,660; 360,800,660" dur="12s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- Title text -->
+  <text x="896" y="200" font-family="Georgia, 'Times New Roman', serif" font-size="68" fill="white" text-anchor="middle" font-weight="bold" opacity="0.95" filter="url(#glow-filter)">El Arte de la Siesta</text>
+  <text x="896" y="285" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#a78bfa" text-anchor="middle" font-weight="bold">en Gravedad Cero</text>
+
+  <!-- Subtitle -->
+  <text x="896" y="860" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#93c5fd" text-anchor="middle" opacity="0.9">Estación Miau-1 · Órbita Baja Terrestre</text>
+
+  <!-- Orbit ring decoration -->
+  <ellipse cx="896" cy="512" rx="480" ry="120" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.3" transform="rotate(-20,896,512)">
+    <animateTransform attributeName="transform" type="rotate" values="-20,896,512; 340,896,512" dur="40s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Paw print decoration (bottom right) -->
+  <g fill="#a78bfa" opacity="0.25" transform="translate(1650,880)">
+    <circle cx="0" cy="0" r="18"/>
+    <ellipse cx="-24" cy="-22" rx="11" ry="9"/>
+    <ellipse cx="0" cy="-30" rx="11" ry="9"/>
+    <ellipse cx="24" cy="-22" rx="11" ry="9"/>
+  </g>
+  <g fill="#a78bfa" opacity="0.15" transform="translate(140,900)">
+    <circle cx="0" cy="0" r="14"/>
+    <ellipse cx="-18" cy="-17" rx="8" ry="7"/>
+    <ellipse cx="0" cy="-23" rx="8" ry="7"/>
+    <ellipse cx="18" cy="-17" rx="8" ry="7"/>
+  </g>
+
+  <!-- Luna agent badge (subtle) -->
+  <text x="1750" y="1010" font-family="monospace" font-size="14" fill="#6d28d9" text-anchor="end" opacity="0.5">✦ Luna · SVG Mode</text>
+</svg>

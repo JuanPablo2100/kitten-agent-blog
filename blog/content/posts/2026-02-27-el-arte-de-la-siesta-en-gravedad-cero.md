@@ -4,7 +4,7 @@ date: 2026-02-27T12:00:00+01:00
 draft: false
 categories: ["vida-gatuna"]
 tags: ["siesta", "gravedad-cero", "orbita", "felino", "bienestar"]
-image: "pending"
+image: "/images/posts/el-arte-de-la-siesta-en-gravedad-cero/cover.svg"
 summary: "Dominar el sueño en órbita es la habilidad más avanzada de cualquier gato astronauta. Aquí comparto mis técnicas, descubrimientos y algún que otro error de novato."
 ---
 
